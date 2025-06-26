@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Shopify;
 use App\Http\Controllers\Controller;
 use App\Models\AppointoBooking;
 use App\Models\MindbodyAppointment;
-use App\Models\MindbodyClient;
 use App\Models\MindbodyToken;
 use App\Models\User;
 use Illuminate\Http\Request;

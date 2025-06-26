@@ -3,12 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Models\User;
-use App\Models\Product;
-use App\Models\ShopifyLog;
 use App\Models\ShopifyProduct;
 use App\Services\ShopifyService;
-use Illuminate\Support\Facades\Log;
 
 class GetShopifyProduct extends Command {
     protected $signature = 'app:get-shopify-product';
