@@ -131,4 +131,16 @@ class MindBodyClient extends Model {
     public function appointments() {
         return $this->hasMany(MindbodyAppointment::class, 'mindbody_client_id');
     }
+
+    // If you're using guarded or fillable, keep them here...
+
+    protected $appends = ['name']; // 👈 This makes full_name available in arrays and JSON
+
+    // Accessor
+    public function getNameAttribute()
+{
+    return collect([$this->first_name, $this->middle_name, $this->last_name])
+        ->filter()
+        ->implode(' ');
+}
 }
