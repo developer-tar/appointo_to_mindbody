@@ -85,9 +85,6 @@ class MindBodyClient extends Model {
         'json_data',
     ];
 
-
-
-
     protected $casts = [
         // JSON
         'custom_client_fields'   => 'array',
@@ -123,13 +120,8 @@ class MindBodyClient extends Model {
     ];
 
 
-
     public function shop() {
         return $this->belongsTo(User::class, 'shop_id');
-    }
-
-    public function appointments() {
-        return $this->hasMany(MindbodyAppointment::class, 'mindbody_client_id');
     }
 
     // If you're using guarded or fillable, keep them here...

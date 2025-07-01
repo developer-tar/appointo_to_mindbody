@@ -46,32 +46,32 @@ class SyncMindBodyToAppointoJob implements ShouldQueue {
             $data = $response->json();
             $appointments = $data['Appointments'] ?? [];
             $appointments = $data['Appointments'] ?? [];
-            $appointments = [
-                [
-                    "GenderPreference" => "None",
-                    "Duration" => 60,
-                    "ProviderId" => "0",
-                    "Id" => 100046496,
-                    "Status" => "NoShow",
-                    "StartDateTime" => "2025-06-25T11:00:00",
-                    "EndDateTime" => "2025-06-25T12:00:00",
-                    "Notes" => null,
-                    "StaffRequested" => true,
-                    "ProgramId" => 1,
-                    "SessionTypeId" => 200,
-                    "LocationId" => 1,
-                    "StaffId" => 100000108,
-                    "Staff" => null,
-                    "ClientId" => "100015639",
-                    "FirstAppointment" => true,
-                    "IsWaitlist" => false,
-                    "WaitlistEntryId" => null,
-                    "ClientServiceId" => null,
-                    "Resources" => null,
-                    "AddOns" => null,
-                    "OnlineDescription" => "A 60 minute session that will blast your muscles!"
-                ]
-            ];
+            // $appointments = [
+            //     [
+            //         "GenderPreference" => "None",
+            //         "Duration" => 60,
+            //         "ProviderId" => "0",
+            //         "Id" => 100046496,
+            //         "Status" => "NoShow",
+            //         "StartDateTime" => "2025-06-25T11:00:00",
+            //         "EndDateTime" => "2025-06-25T12:00:00",
+            //         "Notes" => null,
+            //         "StaffRequested" => true,
+            //         "ProgramId" => 1,
+            //         "SessionTypeId" => 200,
+            //         "LocationId" => 1,
+            //         "StaffId" => 100000108,
+            //         "Staff" => null,
+            //         "ClientId" => "100015639",
+            //         "FirstAppointment" => true,
+            //         "IsWaitlist" => false,
+            //         "WaitlistEntryId" => null,
+            //         "ClientServiceId" => null,
+            //         "Resources" => null,
+            //         "AddOns" => null,
+            //         "OnlineDescription" => "A 60 minute session that will blast your muscles!"
+            //     ]
+            // ];
 
             if (!is_array($appointments)) continue;
 

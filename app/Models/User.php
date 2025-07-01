@@ -30,15 +30,4 @@ class User extends Authenticatable implements IShopModel
         ];
     }
 
-   
-
-    public function mindbodyClients()
-    {
-        return $this->hasMany(MindbodyClient::class, 'shop_id');
-    }
-
-    public function mindbodyAppointments()
-    {
-        return $this->hasMany(MindbodyAppointment::class, 'shop_id');
-    }
 }
