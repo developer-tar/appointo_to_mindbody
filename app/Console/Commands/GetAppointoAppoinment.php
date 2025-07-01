@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Http;
 use App\Jobs\UpdateAppointoAppointment;
 
 class GetAppointoAppoinment extends Command
