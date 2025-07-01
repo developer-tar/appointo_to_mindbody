@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BookingAppointment extends Model
-{
+class BookingAppointment extends Model {
     protected $fillable = [
         'appointment_id',
         'timestring',
@@ -19,6 +18,9 @@ class BookingAppointment extends Model
         'location_id',
         'session_type_id',
         'staff_id',
-        'after_sync_json_data'
+        'after_sync_json_data',
     ];
+    public function scopeUnsynced($query) {
+        return $query->where('is_sync', config('constants.sync.no'));
+    }
 }

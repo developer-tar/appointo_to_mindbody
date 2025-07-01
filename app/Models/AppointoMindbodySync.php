@@ -19,10 +19,7 @@ class AppointoMindbodySync extends Model {
         return $this->belongsTo(User::class, 'shop_id');
     }
 
-    public function appointoBooking() {
-        return $this->belongsTo(AppointoBooking::class);
-    }
-
+  
     public function mindbodyAppointment() {
         return $this->belongsTo(MindbodyAppointment::class);
     }

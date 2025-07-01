@@ -12,7 +12,8 @@ return new class extends Migration {
         Schema::create('booking_appointments', function (Blueprint $table) {
             $table->id();
             $table->string('appointment_id')->nullable();
-            $table->tinyInteger('source')->nullable();
+            $table->tinyInteger('source')->nullable()->comment('1=Appointo, 2=MindBody');
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('timestring')->nullable();
             $table->string('name')->nullable();
@@ -21,7 +22,7 @@ return new class extends Migration {
             $table->string('location_id')->nullable();
             $table->string('session_type_id')->nullable();
             $table->string('staff_id')->nullable();
-
+           
             $table->json('source_json_data')->nullable();
             $table->json('after_sync_json_data')->nullable();
 

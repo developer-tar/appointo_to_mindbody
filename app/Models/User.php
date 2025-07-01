@@ -30,11 +30,7 @@ class User extends Authenticatable implements IShopModel
         ];
     }
 
-    // Relationships to bookings and appointments
-    public function appointoBookings()
-    {
-        return $this->hasMany(AppointoBooking::class, 'shop_id');
-    }
+   
 
     public function mindbodyClients()
     {
